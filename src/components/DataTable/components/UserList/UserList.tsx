@@ -72,6 +72,7 @@ export const UserList = ({ auth, setAuth }: UserListProps) => {
               id="input-with-sx"
               label="Search"
               variant="filled"
+              value={search}
               sx={{
                 width: "500px",
                 paddingBottom: "10px",
@@ -83,7 +84,7 @@ export const UserList = ({ auth, setAuth }: UserListProps) => {
               tag="Roles"
             />
             <MultipleSelectCheckmarks
-              roles={["Active", "Deactive"]}
+              roles={["Active", "Pending", "Suspended"]}
               tag="Status"
             />
             <Box
@@ -111,7 +112,7 @@ export const UserList = ({ auth, setAuth }: UserListProps) => {
         >
           {isModalVisible ? "Close" : "Create User"}
         </Button>
-        <BaseModal isModalVisible={isModalVisible} onBackDropClick={tgl} />
+        <BaseModal isModalVisible={isModalVisible} onBackDropClick={tgl} toggleModal={toggleModal} />
       </div>
       <br />
       <DataTable />

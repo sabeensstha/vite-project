@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Sabeen",
+      "middleName": "",
+      "lastName": "Shrestha",
+      "email": "sabeensstha@gmail.com",
+      "roles": ["Admin", "Manager", "Staffs"]
+    },
+    {
+      "firstName": "Nikesh",
+      "middleName": "Raj ",
+      "lastName": "Maharjan",
+      "email": "nks@gmail.com",
+      "roles": ["Staff"],
+      "id": 2
+    },
+    {
+      "firstName": "New",
+      "middleName": "1 ",
+      "lastName": "User",
+      "email": "new@new.com",
+      "roles": ["Staff"],
+      "id": 3
+    },
+    {
+      "firstName": "Nabin",
+      "middleName": "Kumar",
+      "lastName": "Pradhan",
+      "email": "nbnaki@gmail.com",
+      "roles": ["Manager", "Staff"],
+      "id": 4
+    },
+    {
+      "firstName": "Ranjan",
+      "middleName": "Dev",
+      "lastName": "Shrestha",
+      "email": "rnjn@gmial.com",
+      "roles": ["Staff"],
+      "id": 5
+    },
+    {
+      "firstName": "Rani",
+      "middleName": "Kumari",
+      "lastName": "Jha",
+      "email": "rkj@gmail.com",
+      "roles": ["Staff"],
+      "id": 6
+    },
+    {
+      "firstName": "Admin",
+      "middleName": "",
+      "lastName": "New",
+      "email": "admin@admin.com",
+      "roles": ["Admin"],
+      "id": 7
+    }
+  ]
+}

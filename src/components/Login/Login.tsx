@@ -18,7 +18,7 @@ export const Login = ({ auth, setauth }: LoginProps) => {
   const handleSubmit = () => {
     setauth(!auth);
     console.log(auth);
-    navigate("/dashboard", { replace: true });
+    navigate("/userList", { replace: true });
 
     if (
       userName.current.value === "admin@admin.com" &&
