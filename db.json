@@ -55,6 +55,14 @@
       "email": "admin@admin.com",
       "roles": ["Admin"],
       "id": 7
+    },
+    {
+      "firstName": "Admin",
+      "middleName": "",
+      "lastName": "New",
+      "email": "sabeensstha@gmail.com",
+      "roles": ["Admin"],
+      "id": 7
     }
   ]
 }
