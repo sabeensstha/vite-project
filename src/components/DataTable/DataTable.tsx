@@ -2,7 +2,7 @@ import * as React from "react";
 import { DataGrid, GridColDef, GridColumnsPanel, GridValueGetterParams } from "@mui/x-data-grid";
 import axios from "axios";
 import UserActions from "../UserActions/UserActions";
-import { Box, Checkbox, InputLabel, ListItemText, MenuItem, OutlinedInput, Select, SelectChangeEvent, TextField } from "@mui/material";
+import { Box, Checkbox, FormControl, InputLabel, ListItemText, MenuItem, OutlinedInput, Select, SelectChangeEvent, TextField } from "@mui/material";
 
 
 const ITEM_HEIGHT = 48;
@@ -156,6 +156,7 @@ export default function DataTable() {
   const [rowId, setRowId] = React.useState(null)
   const [pageSize, setPageSize] = React.useState<number>(5)
   const [rolesFilter, setRolesFilter] = React.useState<string[]>([]);
+  const [statusFilter, setStatusFilter] = React.useState("");
 
   const columns: GridColDef[] = [
     { field: "id", headerName: "S.N.", width: 70, headerClassName: "bold" },
@@ -200,6 +201,12 @@ export default function DataTable() {
     "Admin",
     "Manager",
     "Staff"
+  ]
+
+  const status = [
+    "Active",
+    "Pending",
+    "Suspended"
   ]
 
   React.useEffect(() => {
@@ -256,7 +263,11 @@ export default function DataTable() {
     setRows(resultEmail)
   };
 
+  const handleStatusChange = (event: SelectChangeEvent<typeof statusFilter>) => {
+    setStatusFilter(event.target.value as string);
+    console.log(1);
 
+  };
   // React.useEffect(() => {
   //   getData();
   // }, []);
@@ -301,7 +312,23 @@ export default function DataTable() {
             </MenuItem>
           ))}
         </Select>
-
+        <FormControl sx={{
+          width: 300,
+          ml: 5
+        }}>
+          <InputLabel id="demo-simple-select-label">Status</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={statusFilter}
+            label="Age"
+            onChange={handleStatusChange}
+          >
+            <MenuItem value="Active">Active</MenuItem>
+            <MenuItem value="Pending">Pending</MenuItem>
+            <MenuItem value="Suspended">Suspended</MenuItem>
+          </Select>
+        </FormControl>
       </Box>
       <DataGrid
         rows={rows}

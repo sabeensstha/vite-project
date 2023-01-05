@@ -5,6 +5,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+type BasicSelectProps = {
+    statusFilter: string[],
+    tag: string,
+    handleStatusChange: any
+}
+
 export default function BasicSelect() {
     const [age, setAge] = React.useState('');
 
@@ -15,7 +21,7 @@ export default function BasicSelect() {
     return (
         <Box sx={{ minWidth: 120 }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">{tag}</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
