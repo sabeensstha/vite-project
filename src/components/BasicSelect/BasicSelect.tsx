@@ -11,7 +11,7 @@ type BasicSelectProps = {
     handleStatusChange: any
 }
 
-export default function BasicSelect() {
+export default function BasicSelect({ statusFilter, tag, handleStatusChange }: BasicSelectProps) {
     const [age, setAge] = React.useState('');
 
     const handleChange = (event: SelectChangeEvent) => {
